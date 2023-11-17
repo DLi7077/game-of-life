@@ -45,7 +45,7 @@ async function gameOfLife(rows: number, columns: number) {
     .fill(null)
     .map(() => new Array(columns).fill(VOID));
 
-  let randomPoints = (rows * columns) / 10;
+  let randomPoints = Math.floor((rows * columns) / 15);
 
   while (randomPoints--) {
     const randomRow = Math.floor(Math.random() * rows);
@@ -85,4 +85,4 @@ async function gameOfLife(rows: number, columns: number) {
   */
 }
 
-gameOfLife(10, 100);
+gameOfLife(85, 210);
